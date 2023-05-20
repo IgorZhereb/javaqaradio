@@ -1,7 +1,7 @@
 public class Radio {
 
-    public int currentVolume;
-    public int currentStation;
+    private int currentVolume;
+    private int currentStation;
 
     public int getCurrentVolume() {
         return currentVolume;
@@ -44,7 +44,7 @@ public class Radio {
     }
 
 
-    public void nextStation() {                    // След. станция
+    public void next() {                    // След. станция
         if (currentStation != 9) {
             currentStation++;
             return;
@@ -53,7 +53,7 @@ public class Radio {
 
     }
 
-    public void prevStation() {                   // Пред. станция
+    public void prev() {                   // Пред. станция
         if (currentStation != 0) {
             currentStation--;
         } else {

@@ -225,7 +225,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(-1);
-        rad.nextStation();
+        rad.next();
 
         int expected = 1;
         int actual = rad.getCurrentStation();
@@ -238,7 +238,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(0);
-        rad.nextStation();
+        rad.next();
 
         int expected = 1;
         int actual = rad.getCurrentStation();
@@ -251,7 +251,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(1);
-        rad.nextStation();
+        rad.next();
 
         int expected = 2;
         int actual = rad.getCurrentStation();
@@ -264,7 +264,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(8);
-        rad.nextStation();
+        rad.next();
 
         int expected = 9;
         int actual = rad.getCurrentStation();
@@ -277,7 +277,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(9);
-        rad.nextStation();
+        rad.next();
 
         int expected = 0;
         int actual = rad.getCurrentStation();
@@ -290,7 +290,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(10);
-        rad.nextStation();
+        rad.next();
 
         int expected = 1;
         int actual = rad.getCurrentStation();
@@ -303,7 +303,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(-25);
-        rad.nextStation();
+        rad.next();
 
         int expected = 1;
         int actual = rad.getCurrentStation();
@@ -316,7 +316,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(25);
-        rad.nextStation();
+        rad.next();
 
         int expected = 1;
         int actual = rad.getCurrentStation();
@@ -329,7 +329,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(-1);
-        rad.prevStation();
+        rad.prev();
 
         int expected = 9;
         int actual = rad.getCurrentStation();
@@ -342,7 +342,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(0);
-        rad.prevStation();
+        rad.prev();
 
         int expected = 9;
         int actual = rad.getCurrentStation();
@@ -355,7 +355,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(1);
-        rad.prevStation();
+        rad.prev();
 
         int expected = 0;
         int actual = rad.getCurrentStation();
@@ -368,7 +368,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(8);
-        rad.prevStation();
+        rad.prev();
 
         int expected = 7;
         int actual = rad.getCurrentStation();
@@ -380,7 +380,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(9);
-        rad.prevStation();
+        rad.prev();
 
         int expected = 8;
         int actual = rad.getCurrentStation();
@@ -392,7 +392,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(10);
-        rad.prevStation();
+        rad.prev();
 
         int expected = 9;
         int actual = rad.getCurrentStation();
@@ -404,7 +404,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(-25);
-        rad.prevStation();
+        rad.prev();
 
         int expected = 9;
         int actual = rad.getCurrentStation();
@@ -417,7 +417,7 @@ public class RadioTest {
         Radio rad = new Radio();
 
         rad.setCurrentStation(25);
-        rad.prevStation();
+        rad.prev();
 
         int expected = 9;
         int actual = rad.getCurrentStation();
