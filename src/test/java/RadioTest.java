@@ -499,6 +499,19 @@ public class RadioTest {
         int actual = rad.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void ShouldSwitchOnNextStationFrom11() {
+
+        Radio rad = new Radio(11);
+
+        rad.setCurrentStation(11);
+        rad.next();
+
+        int expected = 1;
+        int actual = rad.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
 }
 
 
