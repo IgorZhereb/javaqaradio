@@ -7,7 +7,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFromMinusOne() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(-1);
         rad.increaseVolume();
@@ -21,7 +21,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFromZero() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(0);
         rad.increaseVolume();
@@ -34,7 +34,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFromOne() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(1);
         rad.increaseVolume();
@@ -48,7 +48,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFromNinetyNine() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(99);
         rad.increaseVolume();
@@ -62,7 +62,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFrom100() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(100);
         rad.increaseVolume();
@@ -76,7 +76,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFrom101() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(101);
         rad.increaseVolume();
@@ -90,7 +90,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFromMinusTwentyFive() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(-25);
         rad.increaseVolume();
@@ -104,7 +104,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFromTwentyFive() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(25);
         rad.increaseVolume();
@@ -118,7 +118,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFromMinusOne() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(-1);
         rad.decreaseVolume();
@@ -131,7 +131,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFromZero() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(0);
         rad.decreaseVolume();
@@ -145,7 +145,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFromOne() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(1);
         rad.decreaseVolume();
@@ -159,7 +159,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFromNinetyNine() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(99);
         rad.decreaseVolume();
@@ -173,7 +173,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFrom100() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(100);
         rad.decreaseVolume();
@@ -187,7 +187,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFrom101() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(101);
         rad.decreaseVolume();
@@ -201,7 +201,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFromMinusTwentyFive() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(-25);
         rad.decreaseVolume();
@@ -215,7 +215,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFromTwentyFive() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(15);
 
         rad.setCurrentVolume(25);
         rad.decreaseVolume();
@@ -501,27 +501,14 @@ public class RadioTest {
     }
 
     @Test
-    public void ShouldSwitchOnNextStationFrom11() {
+    public void ShouldSwitchOnNextStationFrom9() {
 
-        Radio rad = new Radio();
+        Radio rad = new Radio(10);
 
-        rad.setCurrentStation(11);
+        rad.setCurrentStation(9);
         rad.next();
 
-        int expected = 1;
-        int actual = rad.getCurrentStation();
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void ShouldSwitchOnPrevStationFrom11() {
-
-        Radio rad = new Radio();
-
-        rad.setCurrentStation(11);
-        rad.prev();
-
-        int expected = 9;
+        int expected = 0;
         int actual = rad.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
