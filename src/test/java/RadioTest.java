@@ -503,7 +503,7 @@ public class RadioTest {
     @Test
     public void ShouldSwitchOnNextStationFrom11() {
 
-        Radio rad = new Radio(11);
+        Radio rad = new Radio();
 
         rad.setCurrentStation(11);
         rad.next();
@@ -512,6 +512,21 @@ public class RadioTest {
         int actual = rad.getCurrentStation();
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void ShouldSwitchOnPrevStationFrom11() {
+
+        Radio rad = new Radio();
+
+        rad.setCurrentStation(11);
+        rad.prev();
+
+        int expected = 9;
+        int actual = rad.getCurrentStation();
+        Assertions.assertEquals(expected, actual);
+    }
+
+
 }
 
 
