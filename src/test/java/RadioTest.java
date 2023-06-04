@@ -7,7 +7,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFromMinusOne() {
 
-        Radio rad = new Radio(15);
+        Radio rad = new Radio();
 
         rad.setCurrentVolume(-1);
         rad.increaseVolume();
@@ -21,7 +21,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFromZero() {
 
-        Radio rad = new Radio(15);
+        Radio rad = new Radio();
 
         rad.setCurrentVolume(0);
         rad.increaseVolume();
@@ -34,7 +34,7 @@ public class RadioTest {
     @Test
     public void ShouldIncreaseVolumeFromOne() {
 
-        Radio rad = new Radio(15);
+        Radio rad = new Radio();
 
         rad.setCurrentVolume(1);
         rad.increaseVolume();
@@ -118,7 +118,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFromMinusOne() {
 
-        Radio rad = new Radio(15);
+        Radio rad = new Radio(19);
 
         rad.setCurrentVolume(-1);
         rad.decreaseVolume();
@@ -131,7 +131,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFromZero() {
 
-        Radio rad = new Radio(15);
+        Radio rad = new Radio(55);
 
         rad.setCurrentVolume(0);
         rad.decreaseVolume();
@@ -145,7 +145,7 @@ public class RadioTest {
     @Test
     public void shouldDecreaseVolumeFromOne() {
 
-        Radio rad = new Radio(15);
+        Radio rad = new Radio(11);
 
         rad.setCurrentVolume(1);
         rad.decreaseVolume();
@@ -243,7 +243,7 @@ public class RadioTest {
     @Test
     public void ShouldSwitchOnNextStationFromZero() {
 
-        Radio rad = new Radio(25);
+        Radio rad = new Radio(15);
 
         rad.setCurrentStation(0);
         rad.next();
@@ -257,7 +257,7 @@ public class RadioTest {
     @Test
     public void ShouldSwitchOnNextStationFromOne() {
 
-        Radio rad = new Radio(25);
+        Radio rad = new Radio(30);
 
         rad.setCurrentStation(1);
         rad.next();
@@ -271,7 +271,7 @@ public class RadioTest {
     @Test
     public void ShouldSwitchOnNextStationFromEight() {
 
-        Radio rad = new Radio(25);
+        Radio rad = new Radio(13);
 
         rad.setCurrentStation(8);
         rad.next();
@@ -299,7 +299,7 @@ public class RadioTest {
     @Test
     public void ShouldSwitchOnNextStationFromTen() {
 
-        Radio rad = new Radio(25);
+        Radio rad = new Radio(20);
 
         rad.setCurrentStation(10);
         rad.next();
@@ -369,7 +369,7 @@ public class RadioTest {
     @Test
     public void ShouldSwitchOnPrevStationFromOne() {
 
-        Radio rad = new Radio(25);
+        Radio rad = new Radio(2);
 
         rad.setCurrentStation(1);
         rad.prev();

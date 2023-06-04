@@ -57,10 +57,9 @@ public class Radio {
     public void next() {                    // След. станция
         if (currentStation != maxStation) {
             currentStation++;
-            return;
+        } else {
+            currentStation = 0;
         }
-        currentStation = 0;
-
     }
 
     public void prev() {                   // Пред. станция
